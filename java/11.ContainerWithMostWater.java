@@ -1,14 +1,20 @@
 # https://leetcode.com/problems/container-with-most-water/
 class Solution {
     public int maxArea(int[] height) {
-    int max = 0;
-    int area = 0;
-    for(int i = 0; i < height.length; i++){
-        for(int j = i+1; j < height.length; j++){
-            area = Math.max(area, Math.min(height[j], height[i]) * (j - i));
-            // System.out.println(" i = " + i + " j = " + j + " area = " + area) ;
+    int n = height.length;
+    int start = 0;
+    int end = n-1;
+    int ans = 0;
+    while(start < end)
+    {
+        int area = Math.min(height[start],height[end])*(end-start);
+        ans = Math.max(ans,area);
+        if(height[start] < height[end]){
+          start++ ;  
+        } else {
+            end-- ;
         }
     }
-    return area;
+    return ans;
     }
 }
