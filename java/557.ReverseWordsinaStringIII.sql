@@ -11,13 +11,8 @@ class Solution {
             while(r < len && ch[r] != ' '){
                 r++;
             } 
-            if(r == len-1 && ch[r] != ' '){
-                char z = ch[r];
-                ch[r] = ch[l];
-                ch[l] = z;
-            }
             int nl = l, nr = r-1;
-            while(nl < nr && nl < len && nr < len && nr > 0){
+            while((nl < nr && nl < len && nr < len && nr > 0) || r == len-1){
                 char temp = ch[nl];
                 ch[nl] = ch[nr];
                 ch[nr] = temp ;
