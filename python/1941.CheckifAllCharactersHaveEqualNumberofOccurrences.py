@@ -13,4 +13,4 @@ class Solution:
                 if prev != value:
                     return False
             prev = value
-        return True     
+        return True
