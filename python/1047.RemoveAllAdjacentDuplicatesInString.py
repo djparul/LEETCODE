@@ -1,4 +1,4 @@
-# 1047. Remove All Adjacent Duplicates In String.py
+# 1047.RemoveAllAdjacentDuplicatesInString.py
 # https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
 class Solution:
     def removeDuplicates(self, s: str) -> str:
