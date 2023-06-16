@@ -13,4 +13,4 @@ class Solution:
             else:
                 mid.append(nums[i])
         return left + mid + right
-        # return [val for val in nums if val<pivot] + [val for val in nums if val==pivot] + [val for val in nums if val>pivot]
+        # return [val for val in nums if val<pivot] + [val for val in nums if val==pivot] + [val for val in nums if val>pivot]  
